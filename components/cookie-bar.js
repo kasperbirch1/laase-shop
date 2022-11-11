@@ -38,7 +38,12 @@ const CookieBar = React.memo(({ data = {} }) => {
   return (
     <AnimatePresence>
       {!acceptedCookies && (
-        <FocusTrap focusTrapOptions={{ allowOutsideClick: true }}>
+        <FocusTrap
+          focusTrapOptions={{
+            allowOutsideClick: true,
+            fallbackFocus: '#__next',
+          }}
+        >
           <m.div
             initial="hide"
             animate="show"

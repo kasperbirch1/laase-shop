@@ -101,7 +101,10 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
               <nav className="main-navigation" role="navigation">
                 {/* Mobile Header Menu */}
                 <div id="mobile-nav" className="main-navigation--mobile">
-                  <FocusTrap active={isMobileNavOpen}>
+                  <FocusTrap
+                    active={isMobileNavOpen}
+                    focusTrapOptions={{ fallbackFocus: '#__next' }}
+                  >
                     <div>
                       <button
                         onClick={() => toggleMobileNav(!isMobileNavOpen)}

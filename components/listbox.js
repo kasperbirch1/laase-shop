@@ -94,6 +94,7 @@ const Listbox = ({
             focusTrapOptions={{
               clickOutsideDeactivates: true,
               preventScroll: true,
+              fallbackFocus: '#__next',
             }}
           >
             <div className="listbox--content">

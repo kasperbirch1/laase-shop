@@ -63,7 +63,7 @@ const Cart = ({ data }) => {
     <>
       <FocusTrap
         active={isCartOpen && hasFocus}
-        focusTrapOptions={{ allowOutsideClick: true }}
+        focusTrapOptions={{ allowOutsideClick: true, fallbackFocus: '#__next' }}
       >
         <m.div
           initial="hide"

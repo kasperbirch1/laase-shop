@@ -41,7 +41,7 @@ const MegaNavigation = ({ items = [], headerHeight }) => {
     <>
       <FocusTrap
         active={meganav.isOpen && hasFocus}
-        focusTrapOptions={{ allowOutsideClick: true }}
+        focusTrapOptions={{ allowOutsideClick: true, fallbackFocus: '#__next' }}
       >
         <div
           ref={!meganav.isOpen ? activeNav : null}
