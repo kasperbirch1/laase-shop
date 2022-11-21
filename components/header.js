@@ -80,7 +80,7 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
         <div ref={headerRef} className="header--outer">
           <div className="header--inner">
             <div className="header--content">
-              <div className="logo">
+              {/* <div className="logo">
                 {router.pathname === '/' ? (
                   <button
                     className="logo--link"
@@ -96,9 +96,9 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                     </a>
                   </Link>
                 )}
-              </div>
+              </div> */}
 
-              <nav className="main-navigation" role="navigation">
+              <nav className="main-navigation p-20" role="navigation">
                 {/* Mobile Header Menu */}
                 <div id="mobile-nav" className="main-navigation--mobile">
                   <FocusTrap
