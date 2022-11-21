@@ -1,5 +1,5 @@
 .counter {
-  @apply inline-grid h-full p-8 border rounded-full bg-pageBG text-pageText;
+  @apply inline-grid h-full rounded-full border bg-pageBG p-8 text-pageText;
   grid-template-columns: auto auto auto;
 
   &.is-inverted {
@@ -12,17 +12,17 @@
 
   &--down,
   &--up {
-    @apply self-center w-32 h-32 -my-1 p-8 bg-transparent rounded-full transition-colors duration-300;
+    @apply -my-1 h-32 w-32 self-center rounded-full bg-transparent p-8 transition-colors duration-300;
 
     .cart & {
       @apply my-0;
     }
 
     &:hover {
-      background: hsla(var(--pageText-hsl), .2);
+      background: hsla(var(--pageText-hsl), 0.2);
 
       .is-inverted & {
-        background: hsla(var(--pageBG-hsl), .2);
+        background: hsla(var(--pageBG-hsl), 0.2);
       }
     }
 
@@ -35,9 +35,9 @@
   input::-webkit-inner-spin-button {
     @apply m-0 appearance-none;
   }
-  
+
   &--amount {
-    @apply relative overflow-hidden w-48 text-12 font-mono;
+    @apply relative w-48 overflow-hidden font-mono text-12;
 
     .cart & {
       @apply w-32;
@@ -50,7 +50,7 @@
       .is-inverted & {
         outline-color: var(--pageBG);
       }
-      
+
       body:not(.is-tabbing) & {
         outline: none;
       }
@@ -58,16 +58,16 @@
   }
 
   &--input {
-    @apply flex relative w-full h-full;
+    @apply relative flex h-full w-full;
     will-change: transform;
 
     + .counter--input {
       @apply absolute inset-0;
     }
-    
+
     input {
-      @apply relative bg-transparent border-0 rounded-none appearance-none p-4 w-full h-full text-center text-current text-16 outline-none;
-      font-feature-settings: "tnum";
+      @apply relative h-full w-full appearance-none rounded-none border-0 bg-transparent p-4 text-center text-16 text-current outline-none;
+      font-feature-settings: 'tnum';
     }
   }
 }

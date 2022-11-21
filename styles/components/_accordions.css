@@ -6,14 +6,14 @@
 
 .accordion {
   @apply w-full border-t;
-  
+
   &--toggle {
-    @apply clean-btn text-left flex justify-between items-center px-0 py-16 w-full bg-transparent font-semibold text-18 leading-135;
+    @apply clean-btn flex w-full items-center justify-between bg-transparent px-0 py-16 text-left text-18 font-semibold leading-135;
   }
 
   &--icon {
-    @apply flex-shrink-0 block relative ml-32 w-12 h-12;
-    transition: .3s cubic-bezier(0.22, 1, 0.36, 1);
+    @apply relative ml-32 block h-12 w-12 flex-shrink-0;
+    transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 
     svg {
       @apply block;
@@ -29,6 +29,6 @@
   }
 
   &--inner {
-    @apply m-0 pb-48 max-w-2xl;
+    @apply m-0 max-w-2xl pb-48;
   }
 }

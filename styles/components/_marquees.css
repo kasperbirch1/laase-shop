@@ -66,7 +66,7 @@
 
 .marquee {
   @apply border-b;
-  
+
   &--item {
     @apply flex;
   }
@@ -76,10 +76,11 @@
   }
 
   &--photo {
-    @apply relative w-120 sm:w-200 px-32 py-16 sm:px-48 sm:py-32;
+    @apply relative w-120 px-32 py-16 sm:w-200 sm:px-48 sm:py-32;
 
     [data-theme='metal'] & {
-      filter: invert(43%) sepia(83%) saturate(3151%) hue-rotate(337deg) brightness(92%) contrast(111%);
+      filter: invert(43%) sepia(83%) saturate(3151%) hue-rotate(337deg)
+        brightness(92%) contrast(111%);
     }
 
     img {
@@ -90,7 +91,7 @@
   }
 
   &--product {
-    @apply flex flex-col -my-1 max-w-[450px];
+    @apply -my-1 flex max-w-[450px] flex-col;
     width: calc(80vw - 2rem);
 
     * {

@@ -1,8 +1,8 @@
 .listbox {
   @apply relative z-2;
-  
+
   &--btn {
-    @apply clean-btn relative z-1 p-0 text-left bg-transparent text-16;
+    @apply clean-btn relative z-1 bg-transparent p-0 text-left text-16;
   }
 
   &--content {
@@ -18,14 +18,14 @@
   }
 
   &--dropdown {
-    @apply bg-pageText overflow-hidden whitespace-nowrap;
+    @apply overflow-hidden whitespace-nowrap bg-pageText;
   }
 
   &--options {
     @apply flex flex-col p-8;
   }
-  
+
   &--item {
-    @apply clean-btn bg-transparent text-pageBG text-left px-8 py-4 text-14 uppercase leading-150 transition-colors hover:bg-pageBG hover:text-pageText;
+    @apply clean-btn bg-transparent px-8 py-4 text-left text-14 uppercase leading-150 text-pageBG transition-colors hover:bg-pageBG hover:text-pageText;
   }
 }

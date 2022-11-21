@@ -1,17 +1,17 @@
 .mega-nav {
-  @apply hidden sm:block absolute top-full inset-x-0 z-3 bg-pageBG;
+  @apply absolute inset-x-0 top-full z-3 hidden bg-pageBG sm:block;
 
   /* Background of opened mega nav */
   &--bg {
     @apply hidden sm:block;
 
     &::before {
-      @apply absolute top-full inset-x-0 z-1 h-1 bg-pageBG;
+      @apply absolute inset-x-0 top-full z-1 h-1 bg-pageBG;
       will-change: transform;
       transform-origin: 0 0;
       transform: scaleY(var(--h));
-      transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1);
-      content: "";
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      content: '';
 
       /* account for the header when styled as an overlay that hasn't scrolled */
       .is-overlay:not(.has-bg) & {
@@ -20,10 +20,10 @@
     }
 
     &::after {
-      @apply absolute top-full inset-x-0 -mt-1 z-2 border-t;
+      @apply absolute inset-x-0 top-full z-2 -mt-1 border-t;
       transform: translate3d(0, var(--hpx), 0);
-      transition: transform .8s cubic-bezier(0.16, 1, 0.3, 1);
-      content: "";
+      transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      content: '';
 
       /* account for the header when styled as an overlay that hasn't scrolled */
       .is-overlay:not(.has-bg) & {
@@ -37,8 +37,8 @@
   }
 
   &--backdrop {
-    @apply fixed inset-0  bg-black bg-opacity-40 pointer-events-none opacity-0;
-    transition: opacity .15s linear;
+    @apply pointer-events-none fixed  inset-0 bg-black bg-opacity-40 opacity-0;
+    transition: opacity 0.15s linear;
 
     &.is-active {
       @apply pointer-events-auto opacity-100;
@@ -54,34 +54,34 @@
 }
 
 .mega-item {
-  @apply absolute top-0 inset-x-0 z-1 -mt-1 overflow-hidden invisible pointer-events-none;
-  transition: visibility .2s .8s;
+  @apply pointer-events-none invisible absolute inset-x-0 top-0 z-1 -mt-1 overflow-hidden;
+  transition: visibility 0.2s 0.8s;
 
   &.is-active {
-    @apply visible pointer-events-auto;
+    @apply pointer-events-auto visible;
     transition-delay: 0s;
   }
 
   &--content {
-    @apply grid grid-cols-2 relative px-32 pt-4 pb-48;
+    @apply relative grid grid-cols-2 px-32 pt-4 pb-48;
     will-change: transform;
   }
 
   ul {
     a,
     button {
-      @apply inline-block text-36 leading-150 hover:opacity-40 transition-opacity duration-200;
+      @apply inline-block text-36 leading-150 transition-opacity duration-200 hover:opacity-40;
     }
   }
 
   &--featured {
-    @apply grid grid-cols-2 gap-16 max-w-[725px] relative w-full border-l pl-32;
+    @apply relative grid w-full max-w-[725px] grid-cols-2 gap-16 border-l pl-32;
 
     &-title {
-      @apply block absolute top-0 right-full w-10 text-12 uppercase tracking-widest font-semibold;
-      
+      @apply absolute top-0 right-full block w-10 text-12 font-semibold uppercase tracking-widest;
+
       span {
-        @apply block overflow-hidden absolute top-1/2 left-0 whitespace-nowrap rotate-90;
+        @apply absolute top-1/2 left-0 block rotate-90 overflow-hidden whitespace-nowrap;
         transform-origin: 0 0;
       }
     }

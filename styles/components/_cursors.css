@@ -1,29 +1,29 @@
 .cursor {
-  @apply fixed top-0 left-0 w-0 h-0 pointer-events-none;
+  @apply pointer-events-none fixed top-0 left-0 h-0 w-0;
   z-index: 120;
 
   &--content {
-    @apply absolute transform-gpu -translate-x-1/2 -translate-y-1/2;
+    @apply absolute -translate-x-1/2 -translate-y-1/2 transform-gpu;
   }
 
   /* Simple dot cursor */
   span {
-    @apply block relative w-40 h-40;
+    @apply relative block h-40 w-40;
 
     &::before {
-      @apply absolute inset-0 border rounded-full;
+      @apply absolute inset-0 rounded-full border;
       transform: scale(0);
       will-change: transform;
-      transition: transform .5s .1s cubic-bezier(0.22, 1, 0.36, 1);
-      content: "";
+      transition: transform 0.5s 0.1s cubic-bezier(0.22, 1, 0.36, 1);
+      content: '';
     }
 
     &::after {
-      @apply absolute inset-0 bg-pageText rounded-full;
+      @apply absolute inset-0 rounded-full bg-pageText;
       will-change: transform;
-      transform: scale(.625);
-      transition: transform .5s .1s cubic-bezier(0.22, 1, 0.36, 1);
-      content: "";
+      transform: scale(0.625);
+      transition: transform 0.5s 0.1s cubic-bezier(0.22, 1, 0.36, 1);
+      content: '';
     }
   }
 
@@ -34,7 +34,7 @@
       }
 
       &::after {
-        transform: scale(.125);
+        transform: scale(0.125);
       }
     }
   }
