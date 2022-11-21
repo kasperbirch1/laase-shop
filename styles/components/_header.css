@@ -71,11 +71,11 @@ a[href='#content'].skip-link {
 }
 
 .menu-toggle {
-  /* @apply sm:hidden absolute inset-y-0 left-0 z-6 clean-btn p-15 bg-transparent; */
+  /* @apply clean-btn absolute inset-y-0 left-0 z-6 bg-transparent p-15 sm:hidden; */
   @apply clean-btn absolute inset-y-0 left-0 z-6 bg-transparent sm:hidden;
 
   .is-overlay:not(.has-bg) & {
-    @apply transition-colors duration-300;
+    @apply text-white transition-colors duration-300;
   }
 
   &.is-open {
