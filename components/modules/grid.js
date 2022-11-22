@@ -6,7 +6,7 @@ import Freeform from '@components/freeform'
 import AccordionList from '@components/accordion-list'
 
 const Grid = ({ data = {} }) => {
-  const { size, columns } = data
+  const { size, columns, spacing } = data
 
   const getGridSize = (
     breakpoint,
@@ -36,10 +36,12 @@ const Grid = ({ data = {} }) => {
   }
 
   return (
-    <section className="section">
+    <section className={cx({ section: spacing })}>
       <div className="section--content">
         <div
-          className={`grid grid-cols-${size} gap-x-16 gap-y-16 sm:gap-x-32 lg:gap-x-48`}
+          className={cx(`grid grid-cols-${size}`, {
+            'gap-x-16 gap-y-16 sm:gap-x-32 lg:gap-x-48': spacing,
+          })}
         >
           {columns.map((col, key) => {
             const { sizes, blocks } = col
