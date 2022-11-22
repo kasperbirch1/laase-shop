@@ -106,7 +106,7 @@ const Cart = ({ data }) => {
               <div className="cart--footer">
                 <div className="cart--subtotal">
                   <span>Subtotal</span>
-                  <span>${centsToPrice(subTotal)}</span>
+                  <span>{centsToPrice(subTotal)} kr.</span>
                 </div>
 
                 <a

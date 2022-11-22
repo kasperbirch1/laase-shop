@@ -162,7 +162,7 @@ function getProductSchema(product, activeVariantID, site) {
         ? `http://schema.org/${variant.inStock ? 'InStock' : 'SoldOut'}`
         : `http://schema.org/${product.inStock ? 'InStock' : 'SoldOut'}`,
       price: centsToPrice(query.variant ? variant.price : product.price),
-      priceCurrency: 'USD',
+      priceCurrency: 'USD', // TODO: make this danish krone
     },
     brand: {
       '@type': 'Brand',
