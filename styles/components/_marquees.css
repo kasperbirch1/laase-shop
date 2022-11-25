@@ -65,7 +65,7 @@
 }
 
 .marquee {
-  @apply border-b;
+  /* @apply border-b; */
 
   &--item {
     @apply flex;

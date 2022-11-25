@@ -6,33 +6,33 @@
   }
 
   &--gallery {
-    @apply relative mb-48 md:mb-0 xs:p-32 md:p-96 bg-pageBG border-b md:border-none;
+    @apply relative mb-48 border-b bg-pageBG xs:p-32 md:mb-0 md:border-none md:p-96;
 
     .carousel {
-      @apply max-w-xl mx-auto;
+      @apply mx-auto max-w-xl;
     }
   }
 
   &--details {
-    @apply bg-pageBG flex flex-col;
+    @apply flex flex-col bg-pageBG;
   }
 
   &--info {
-    @apply w-full max-w-xl m-auto p-16 sm:p-32;
+    @apply m-auto w-full max-w-xl p-16 sm:p-32;
   }
 
   &--header {
-    @apply flex mb-32 pb-8 border-b;
+    @apply mb-32 flex border-b pb-8;
 
     .price {
-      @apply flex flex-col items-end mt-auto ml-auto;
+      @apply mt-auto ml-auto flex flex-col items-end;
 
       &--current {
-        @apply text-20 leading-150 font-semibold;
+        @apply text-20 font-semibold leading-150;
       }
 
       &--discount {
-        @apply mb-8 p-4 rounded-md bg-pageText text-pageBG text-10 leading-125 tracking-widest font-semibold uppercase;
+        @apply mb-8 rounded-md bg-pageText p-4 text-10 font-semibold uppercase leading-125 tracking-widest text-pageBG;
       }
     }
   }
@@ -46,10 +46,10 @@
   }
 
   &--variant {
-    @apply flex items-center mb-8 text-14 leading-160 tracking-wider font-semibold uppercase;
+    @apply mb-8 flex items-center text-14 font-semibold uppercase leading-160 tracking-wider;
 
     .label {
-      @apply flex-shrink-0 -my-4 scale-90;
+      @apply -my-4 flex-shrink-0 scale-90;
     }
   }
 
@@ -58,10 +58,10 @@
   }
 
   &--actions {
-    @apply sm:flex sticky bottom-0 mt-16 p-16 md:p-32 border-t bg-pageBG is-textured text-center;
+    @apply is-textured sticky bottom-0 mt-16 border-t bg-pageBG p-16 text-center sm:flex md:p-32;
 
     .counter {
-      @apply hidden sm:inline-flex mr-16;
+      @apply mr-16 hidden sm:inline-flex;
     }
   }
 
@@ -71,18 +71,18 @@
 }
 
 .option {
-  @apply flex mt-16 py-16 border-t;
+  @apply mt-16 flex border-t py-16;
 
   &--title {
     @apply mr-48 text-12 font-semibold uppercase tracking-wider;
   }
 
   &--values {
-    @apply flex flex-wrap justify-end ml-auto gap-x-8 gap-y-8;
+    @apply ml-auto flex flex-wrap justify-end gap-x-8 gap-y-8;
     grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
   }
 
   &--swatch {
-    @apply clean-btn p-0 bg-transparent;
+    @apply clean-btn bg-transparent p-0;
   }
 }

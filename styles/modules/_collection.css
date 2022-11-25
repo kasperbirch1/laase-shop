@@ -1,16 +1,16 @@
 .collection {
   @apply border-b;
-  
+
   &--tools {
-    @apply sticky top-[var(--headerHeight)] z-2 flex justify-between bg-pageBG border-b;
+    @apply sticky top-[var(--headerHeight)] z-2 flex justify-between border-b bg-pageBG;
   }
 
   &--content {
     @apply relative z-1 overflow-hidden;
   }
-  
+
   &--grid {
-    @apply grid grid-cols-1 md:grid-cols-3 -m-1;
+    @apply -m-1 grid grid-cols-1 md:grid-cols-3;
 
     &.is-empty {
       @apply grid-cols-1;
@@ -18,7 +18,7 @@
   }
 
   &--empty {
-    @apply px-16 py-64 min-h-[35vh] text-center;
+    @apply min-h-[35vh] px-16 py-64 text-center;
 
     .filters-reset {
       @apply mt-32;
@@ -26,26 +26,26 @@
   }
 
   &--pagination {
-    @apply relative p-16 sm:py-32 text-center is-textured bg-pageBG border-t;
+    @apply is-textured relative border-t bg-pageBG p-16 text-center sm:py-32;
   }
 
   &--count {
-    @apply relative p-16 sm:py-32 text-center bg-pageBG border-t;
+    @apply relative border-t bg-pageBG p-16 text-center sm:py-32;
   }
 
   &--filter-actions {
     @apply flex items-center px-8 sm:px-16;
 
     .filters-toggle {
-      @apply clean-btn flex items-center relative p-16 bg-transparent text-14 leading-150 font-semibold uppercase;
+      @apply clean-btn relative flex items-center bg-transparent p-16 text-14 font-semibold uppercase leading-150;
 
       &--count {
-        @apply w-24 h-24 ml-8 rounded-full bg-pageText text-pageBG text-12 leading-[2];
+        @apply ml-8 h-24 w-24 rounded-full bg-pageText text-12 leading-[2] text-pageBG;
       }
     }
 
     .filters-reset {
-      @apply hidden sm:block ml-8;
+      @apply ml-8 hidden sm:block;
     }
   }
 
@@ -56,16 +56,16 @@
       @apply border-0;
 
       &--inner {
-        @apply max-w-none p-0 border-b border-pageText;
+        @apply max-w-none border-b border-pageText p-0;
       }
     }
   }
 }
 
 .collection-count {
-  @apply hidden relative ml-16 leading-100;
+  @apply relative ml-16 hidden leading-100;
   vertical-align: super;
-  font-size: .5em;
+  font-size: 0.5em;
 
   /* Only show product counts for the mega-nav */
   .mega-nav & {
@@ -74,7 +74,7 @@
 }
 
 .collection-sort {
-  @apply flex ml-auto px-8 sm:px-16;
+  @apply ml-auto flex px-8 sm:px-16;
 
   .listbox {
     @apply flex;
@@ -85,7 +85,7 @@
   }
 
   &--title {
-    @apply hidden sm:inline mr-8 font-semibold uppercase;
+    @apply mr-8 hidden font-semibold uppercase sm:inline;
   }
 
   &--icon {
@@ -94,11 +94,12 @@
 }
 
 .product-card {
-  @apply flex flex-col relative;
+  @apply relative flex flex-col;
 
   .collection &,
   .marquee & {
-    @apply p-32 m-[-0.5px] border;
+    /* @apply m-[-0.5px] border p-32; */
+    @apply my-50 mx-25 shadow-xl;
   }
 
   &.is-inline {
@@ -108,15 +109,15 @@
   &--visuals {
     @apply relative;
   }
-  
+
   &--photo {
     @apply relative overflow-hidden;
 
     .is-hover {
-      @apply absolute inset-0 z-1 opacity-0 invisible transition-all;
+      @apply invisible absolute inset-0 z-1 opacity-0 transition-all;
 
       .product-card:hover & {
-        @apply opacity-100 visible;
+        @apply visible opacity-100;
       }
     }
   }
@@ -132,7 +133,7 @@
   }
 
   &--details {
-    @apply text-center;
+    @apply p-20 text-center;
 
     .product-card--visuals + & {
       @apply mt-16;
@@ -156,11 +157,11 @@
   }
 
   &--link {
-    @apply block no-underline text-current;
+    @apply block text-current no-underline;
 
     &::after {
-      @apply block absolute inset-0 z-2;
-      content: "";
+      @apply absolute inset-0 z-2 block;
+      content: '';
     }
   }
 
@@ -168,7 +169,7 @@
     @apply relative z-3 mt-16;
 
     .option {
-      @apply m-0 p-0 border-0;
+      @apply m-0 border-0 p-0;
 
       &--values {
         @apply mx-auto;
@@ -177,11 +178,11 @@
   }
 
   &--add {
-    @apply absolute bottom-0 inset-x-0 z-3 text-center mx-16 mb-32 opacity-0 invisible translate-y-1/2 transition-all;
+    @apply invisible absolute inset-x-0 bottom-0 z-3 mx-16 mb-32 translate-y-1/2 text-center opacity-0 transition-all;
     will-change: transform;
 
     .product-card:hover & {
-      @apply opacity-100 visible translate-y-0;
+      @apply visible translate-y-0 opacity-100;
     }
   }
 
@@ -189,24 +190,24 @@
     @apply flex items-center justify-center;
 
     &--current {
-      @apply sm:text-16 sm:leading-150 font-semibold;
+      @apply font-semibold sm:text-16 sm:leading-150;
     }
 
     &--discount {
-      @apply ml-8 px-6 py-4 rounded-md bg-pageText text-pageBG text-10 leading-125 tracking-widest font-semibold uppercase;
+      @apply ml-8 rounded-md bg-pageText px-6 py-4 text-10 font-semibold uppercase leading-125 tracking-widest text-pageBG;
     }
   }
 }
 
 .product-featured {
-  @apply flex flex-col relative;
+  @apply relative flex flex-col;
 
   h2 {
     @apply mt-4 text-center text-16 font-semibold transition-opacity duration-200;
 
     .product-featured:hover & {
-        @apply opacity-100 visible;
-      }
+      @apply visible opacity-100;
+    }
   }
 
   &:hover {
