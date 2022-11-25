@@ -48,6 +48,7 @@ export async function getPage(slug, preview) {
             ${queries.modules},
           }
         },
+        products[wasDeleted != true && isDraft != true]->${queries.product},
         title,
         seo
       },
