@@ -58,6 +58,34 @@ export default {
       group: 'content',
     },
     {
+      title: 'Products Grid',
+      name: 'products',
+      type: 'array',
+      of: [
+        {
+          title: 'Product',
+          type: 'reference',
+          to: [{ type: 'product' }],
+          options: {
+            filter: ({ document }) => {
+              const addedProducts = document.products
+                .map((p) => p._ref)
+                .filter(Boolean)
+
+              return {
+                filter: '!(_id in $ids)',
+                params: {
+                  ids: addedProducts,
+                },
+              }
+            },
+          },
+        },
+      ],
+      validation: (Rule) => Rule.unique(),
+      group: 'content',
+    },
+    {
       title: 'SEO / Share Settings',
       name: 'seo',
       type: 'seo',
