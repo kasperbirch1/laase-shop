@@ -48,7 +48,7 @@ const Link = ({ link, children, ...rest }) => {
       <NextLink
         href={
           isHome || isShop
-            ? `/${isShop ? 'shop' : ''}`
+            ? `/${isShop ? 'butik' : ''}`
             : isStatic !== false
             ? `/${isStatic}`
             : `/${isDynamic ? `${isDynamic}/` : ''}${link.page?.slug}`
