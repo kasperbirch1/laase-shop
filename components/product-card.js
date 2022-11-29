@@ -145,7 +145,7 @@ const ProductCard = React.forwardRef(
           <div className="product-card--header">
             <h2 className="product-card--title">
               <Link
-                href={`/products/${
+                href={`/produkt/${
                   product.slug +
                   (product.surfaceOption ? `?variant=${activeVariant.id}` : '')
                 }`}
