@@ -115,7 +115,7 @@ export default {
       slug: 'slug'
     },
     prepare({ title = 'Untitled', slug = {} }) {
-      const path = `/shop/${slug.current}`
+      const path = `/butik/${slug.current}`
       return {
         title,
         subtitle: slug.current ? path : '(missing slug)'
