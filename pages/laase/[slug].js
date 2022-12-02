@@ -155,7 +155,7 @@ function getProductSchema(product, activeVariantID, site) {
     sku: query.variant ? variant.sku : product.sku,
     offers: {
       '@type': 'Offer',
-      url: `${site.rootDomain}/produkt/${product.slug}${
+      url: `${site.rootDomain}/laase/${product.slug}${
         query.variant ? `?variant=${variant.id}` : ''
       }`,
       availability: query.variant

@@ -343,7 +343,7 @@ export default {
       slug = {},
       cartPhotos,
     }) {
-      const path = `/produkt/${slug.current ?? store.slug?.current}`
+      const path = `/laase/${slug.current ?? store.slug?.current}`
       return {
         title:
           (title ? title : store.title) +
