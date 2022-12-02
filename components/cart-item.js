@@ -46,7 +46,7 @@ function CartItem({ item }) {
             <div className="cart-item--variant">{item.title}</div>
             <h2 className="cart-item--name">
               <Link
-                href={`/produkt/${item.product.slug}?variant=${item.id}`}
+                href={`/laase/${item.product.slug}?variant=${item.id}`}
                 scroll={false}
               >
                 <a
