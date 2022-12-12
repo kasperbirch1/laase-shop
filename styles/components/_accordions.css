@@ -1,4 +1,5 @@
 .accordion-group {
+  @apply p-20;
   &:not(:last-child) {
     @apply mb-48;
   }
