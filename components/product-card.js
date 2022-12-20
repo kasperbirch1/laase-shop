@@ -143,7 +143,7 @@ const ProductCard = React.forwardRef(
 
         <div className="product-card--details">
           <div className="product-card--header">
-            <h2 className="product-card--title">
+            <h2 className="product-card--title is-h4">
               <Link
                 href={`/laase/${
                   product.slug +

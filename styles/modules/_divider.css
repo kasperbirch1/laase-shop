@@ -1,3 +1,4 @@
 .divider {
-  @apply relative border-b;
+  /* @apply relative border-b; */
+  @apply relative;
 }
