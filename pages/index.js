@@ -21,7 +21,11 @@ const Home = ({ data }) => {
   return (
     <Layout site={site} page={page}>
       {page.modules?.map((module, key) => (
-        <Module key={key} index={key} data={module} />
+        <Module
+          key={key}
+          index={key}
+          data={{ ...module, products: page.products }}
+        />
       ))}
     </Layout>
   )
@@ -41,6 +45,7 @@ export async function getStaticProps({ preview, previewData }) {
           ${queries.modules},
         }
       },
+      products[wasDeleted != true && isDraft != true]->${queries.product},
       title,
       seo
     }
