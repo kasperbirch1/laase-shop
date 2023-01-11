@@ -1,8 +1,9 @@
 .collection {
-  @apply border-b;
+  /* @apply border-b; */
 
   &--tools {
-    @apply sticky top-[var(--headerHeight)] z-2 flex justify-between border-b bg-pageBG;
+    /* @apply sticky top-[var(--headerHeight)] z-2 flex justify-between border-b bg-pageBG; */
+    @apply sticky top-[var(--headerHeight)] z-2 flex justify-between bg-pageBG;
   }
 
   &--content {
@@ -31,7 +32,8 @@
   }
 
   &--count {
-    @apply relative border-t bg-pageBG p-16 text-center sm:py-32;
+    /* @apply relative border-t bg-pageBG p-16 text-center sm:py-32; */
+    @apply relative bg-pageBG p-16 text-center sm:py-32;
   }
 
   &--filter-actions {
