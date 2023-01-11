@@ -135,7 +135,7 @@
   }
 
   &--details {
-    @apply p-20 text-center;
+    @apply p-10 text-center;
 
     .product-card--visuals + & {
       @apply mt-16;
