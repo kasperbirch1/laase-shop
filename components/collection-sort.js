@@ -4,7 +4,7 @@ import Listbox from '@components/listbox'
 
 const CollectionSort = ({ sortOptions, activeSort, onChange }) => {
   return (
-    <div className="collection-sort is-right">
+    <div className="collection-sort is-right ml-auto flex px-8 sm:px-16">
       <Listbox
         id="collection-sort"
         label="Select sorting order"
@@ -14,8 +14,10 @@ const CollectionSort = ({ sortOptions, activeSort, onChange }) => {
         onChange={onChange}
         before={
           <>
-            <span className="collection-sort--icon"></span>
-            <span className="collection-sort--title">Sort:</span>
+            <span className="collection-sort--icon has-indicator"></span>
+            <span className="collection-sort--title mr-8 hidden font-semibold uppercase sm:inline">
+              Sort:
+            </span>
           </>
         }
       />

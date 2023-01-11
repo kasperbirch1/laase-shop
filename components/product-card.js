@@ -102,10 +102,13 @@ const ProductCard = React.forwardRef(
       <m.div
         ref={ref}
         variants={itemAnim}
-        className={cx('product-card', className)}
+        className={cx(
+          'product-card relative flex flex-col shadow-md',
+          className
+        )}
       >
         {hasVisuals && (
-          <div className="product-card--visuals">
+          <div className="product-card--visuals relative">
             {/* Show Gallery */}
             {showGallery && (
               <div className="product-card--gallery z-10">

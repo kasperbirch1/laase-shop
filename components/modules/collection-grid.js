@@ -155,7 +155,7 @@ const Collection = ({ data = {} }) => {
 
   return (
     <section className="collection">
-      <div className="collection--tools">
+      <div className="collection--tools sticky top-[var(--headerHeight)] z-2 flex justify-between bg-pageBG">
         {filter?.isActive && (
           <CollectionFilter
             filterGroups={filterGroups}
@@ -185,11 +185,14 @@ const Collection = ({ data = {} }) => {
         />
       )}
 
-      <div className="collection--content">
+      <div className="collection--content relative z-1 overflow-hidden">
         <div
-          className={cx('collection--grid', {
-            'is-empty': !orderedProducts.length,
-          })}
+          className={cx(
+            'collection--grid mx-20 mt-20 grid grid-cols-1 gap-20 sm:grid-cols-2 md:grid-cols-4',
+            {
+              'is-empty grid-cols-1': !orderedProducts.length,
+            }
+          )}
         >
           {paginatedProducts.map((product, key) => (
             <ProductCard
@@ -216,7 +219,7 @@ const Collection = ({ data = {} }) => {
           ))}
 
           {orderedProducts.length === 0 && (
-            <div className="collection--empty">
+            <div className="collection--empty min-h-[35vh] px-16 py-64 text-center">
               {noFilterResults && <BlockContent blocks={noFilterResults} />}
               <button
                 className="filters-reset btn is-large"
@@ -236,7 +239,7 @@ const Collection = ({ data = {} }) => {
         </div>
 
         {hasPagination && (
-          <div className="collection--pagination">
+          <div className="collection--pagination is-textured relative border-t bg-pageBG p-16 text-center sm:py-32">
             <button className="btn is-large" onClick={loadMore}>
               Load More
               <span className="sr-only">
@@ -248,7 +251,7 @@ const Collection = ({ data = {} }) => {
         )}
 
         {orderedProducts?.length > 0 && (
-          <div className="collection--count">
+          <div className="collection--count bg-pageBG p-16 text-center sm:py-32">
             <p aria-live="polite" role="status" aria-atomic="true">
               Showing {paginatedProducts.length} of {orderedProducts.length}{' '}
               products
