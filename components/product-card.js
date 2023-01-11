@@ -108,7 +108,7 @@ const ProductCard = React.forwardRef(
           <div className="product-card--visuals">
             {/* Show Gallery */}
             {showGallery && (
-              <div className="product-card--gallery">
+              <div className="product-card--gallery z-10">
                 <ProductGallery
                   photosets={product.photos.main}
                   activeVariant={activeVariant}
@@ -118,7 +118,6 @@ const ProductCard = React.forwardRef(
                 />
               </div>
             )}
-
             {/* Show Thumbnail */}
             {showThumbs && (
               <div className="product-card--thumb">
@@ -128,7 +127,6 @@ const ProductCard = React.forwardRef(
                 />
               </div>
             )}
-
             {/* Quick Add */}
             {showQuickAdd && activeVariant.inStock && (
               <div className="product-card--add is-inverted">
@@ -140,7 +138,6 @@ const ProductCard = React.forwardRef(
             )}
           </div>
         )}
-
         <div className="product-card--details">
           <div className="product-card--header">
             <h2 className="product-card--title is-h4">
