@@ -1,4 +1,4 @@
-.accordion-group {
+/* .accordion-group {
   @apply p-20;
   &:not(:last-child) {
     @apply mb-48;
@@ -32,4 +32,4 @@
   &--inner {
     @apply m-0 max-w-2xl pb-48;
   }
-}
+} */

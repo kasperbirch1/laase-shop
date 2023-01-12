@@ -13,7 +13,7 @@ const AccordionList = ({ data }) => {
   }
 
   return (
-    <div className="accordion-group">
+    <div className="mb-48 p-20 last:mb-0" data-name="accordion-group">
       {items.map((accordion, key) => {
         return (
           <Accordion

@@ -35,6 +35,11 @@ module.exports = {
     },
   ],
   theme: {
+    extend: {
+      transitionTimingFunction: {
+        'upside-down-animation': 'cubic-bezier(0.22, 1, 0.36, 1)',
+      },
+    },
     screens: {
       xs: '480px',
       sm: '768px',
