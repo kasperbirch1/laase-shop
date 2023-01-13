@@ -1,4 +1,4 @@
-.cookie-bar {
+/* .cookie-bar {
   @apply fixed bottom-0 right-0 z-9 p-16 w-full max-w-3xl;
 
   &--content {
@@ -12,7 +12,7 @@
       @apply text-14 leading-150;
 
       br {
-        @apply hidden sm:block;
+        @apply hidden sm:block; // I DON'T IF THIS IS NEEDED
       }
     }
   }
@@ -24,4 +24,4 @@
       @apply order-first sm:order-none;
     }
   }
-}
+} */
