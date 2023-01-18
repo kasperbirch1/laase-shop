@@ -16,7 +16,7 @@ const Marquee = ({ data = {} }) => {
   })
 
   return (
-    <div ref={observe} className="marquee-section">
+    <div ref={observe} className="marquee-section mx-auto max-w-7xl">
       <Marqy
         speed={speed}
         direction={reverse ? 'right' : 'left'}

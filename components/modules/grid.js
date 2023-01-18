@@ -36,7 +36,7 @@ const Grid = ({ data = {} }) => {
   }
 
   return (
-    <section className={cx({ section: spacing })}>
+    <section className={cx({ section: spacing }, 'mx-auto max-w-7xl')}>
       <div className="section--content">
         <div
           className={cx(`grid grid-cols-${size}`, {

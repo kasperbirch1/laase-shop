@@ -10,7 +10,7 @@ import {
 
 const ProductHero = ({ product, activeVariant, onVariantChange }) => {
   return (
-    <section className="product">
+    <section className="product mx-auto max-w-7xl">
       <div className="product--content">
         <div className="product--gallery">
           <ProductGallery

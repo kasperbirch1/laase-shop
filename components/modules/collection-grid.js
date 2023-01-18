@@ -154,7 +154,7 @@ const Collection = ({ data = {} }) => {
   ])
 
   return (
-    <section className="collection">
+    <section className="collection mx-auto max-w-7xl">
       <div className="collection--tools">
         {filter?.isActive && (
           <CollectionFilter
