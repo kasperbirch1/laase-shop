@@ -128,19 +128,19 @@ const ProductCard = React.forwardRef(
               </div>
             )}
             {/* Quick Add */}
-            {showQuickAdd && activeVariant.inStock && (
+            {/* {showQuickAdd && activeVariant.inStock && (
               <div className="product-card--add is-inverted">
                 <ProductAdd
                   productID={activeVariant.id}
                   className="btn border-none"
                 />
               </div>
-            )}
+            )} */}
           </div>
         )}
         <div className="product-card--details">
           <div className="product-card--header">
-            <h2 className="product-card--title is-h4">
+            <h2 className="product-card--title text-15 font-bold md:text-20">
               <Link
                 href={`/laase/${
                   product.slug +
@@ -163,6 +163,16 @@ const ProductCard = React.forwardRef(
                     : product.comparePrice
                 }
               />
+            )}
+
+            {/* Quick Add */}
+            {showQuickAdd && activeVariant.inStock && (
+              <div className="product-card--add is-inverted">
+                <ProductAdd
+                  productID={activeVariant.id}
+                  className="btn border-none"
+                />
+              </div>
             )}
           </div>
 

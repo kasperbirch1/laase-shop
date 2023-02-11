@@ -26,11 +26,11 @@
       @apply mt-auto ml-auto flex flex-col items-end;
 
       &--current {
-        @apply text-20 font-semibold leading-150;
+        @apply whitespace-nowrap text-20 font-semibold leading-150;
       }
 
       &--discount {
-        @apply mb-8 rounded-md bg-pageText p-4 text-10 font-semibold uppercase leading-125 tracking-widest text-pageBG;
+        @apply mb-8 whitespace-nowrap rounded-md bg-pageText p-4 text-10 font-semibold uppercase leading-125 tracking-widest text-pageBG;
       }
     }
   }
@@ -40,7 +40,7 @@
   }
 
   &--title {
-    @apply pr-32 sm:pr-48;
+    @apply pr-20;
   }
 
   &--variant {

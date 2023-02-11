@@ -144,6 +144,7 @@
 
   &--title {
     @apply m-0 !important;
+    /* @apply h-50; */
 
     .is-featured & {
       @apply text-16 font-semibold;
@@ -180,7 +181,8 @@
   }
 
   &--add {
-    @apply invisible absolute inset-x-0 bottom-0 z-3 mx-16 mb-32 translate-y-1/2  text-center opacity-0 transition-all;
+    /* @apply z-3 mx-auto mt-20; */
+    @apply invisible absolute top-0 right-0 z-3 m-10 translate-y-1/2  text-center opacity-0 transition-all;
     will-change: transform;
 
     .product-card:hover & {
@@ -189,14 +191,13 @@
   }
 
   .price {
-    @apply flex items-center justify-center;
-
+    @apply grid grid-cols-2 items-center gap-5;
     &--current {
-      @apply font-semibold sm:text-16 sm:leading-150;
+      @apply col-start-2 justify-self-end whitespace-nowrap text-15 font-semibold;
     }
 
     &--discount {
-      @apply ml-8 rounded-md bg-pageText px-6 py-4 text-10 font-semibold uppercase leading-125 tracking-widest text-pageBG;
+      @apply w-min rounded-md bg-pageText px-6 py-4 text-8 font-semibold uppercase leading-125 tracking-widest text-pageBG xs:w-max;
     }
   }
 }
