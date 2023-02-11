@@ -238,10 +238,10 @@ const Collection = ({ data = {} }) => {
         {hasPagination && (
           <div className="collection--pagination">
             <button className="btn is-large" onClick={loadMore}>
-              Load More
+              Se mere
               <span className="sr-only">
                 {' '}
-                products from the "{title}" collection
+                produkter fra "{title}" collection
               </span>
             </button>
           </div>
@@ -250,8 +250,8 @@ const Collection = ({ data = {} }) => {
         {orderedProducts?.length > 0 && (
           <div className="collection--count">
             <p aria-live="polite" role="status" aria-atomic="true">
-              Showing {paginatedProducts.length} of {orderedProducts.length}{' '}
-              products
+              Viser {paginatedProducts.length} af {orderedProducts.length}{' '}
+              produkter
             </p>
           </div>
         )}
