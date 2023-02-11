@@ -12,7 +12,7 @@
 
   &--grid {
     /* @apply -m-1 grid grid-cols-1 md:grid-cols-3; */
-    @apply mx-20 mt-20 grid grid-cols-1 gap-20 sm:grid-cols-2 md:grid-cols-4;
+    @apply mx-20 mt-20 grid grid-cols-2 gap-20 sm:grid-cols-4 md:grid-cols-5;
 
     &.is-empty {
       @apply grid-cols-1;
