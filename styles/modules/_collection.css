@@ -28,7 +28,7 @@
   }
 
   &--pagination {
-    @apply relative border-t bg-pageBG p-16 text-center sm:py-32;
+    @apply relative bg-pageBG p-16 text-center sm:py-32;
   }
 
   &--count {
@@ -97,7 +97,11 @@
 }
 
 .product-card {
-  @apply relative flex flex-col shadow-md;
+  @apply relative flex flex-col  overflow-hidden rounded-3xl shadow;
+
+  &--header {
+    @apply flex h-full flex-col justify-between;
+  }
 
   .collection &,
   .marquee & {
@@ -135,11 +139,7 @@
   }
 
   &--details {
-    @apply p-10 text-center;
-
-    .product-card--visuals + & {
-      @apply mt-16;
-    }
+    @apply h-full bg-white p-20;
   }
 
   &--title {
@@ -180,7 +180,7 @@
   }
 
   &--add {
-    @apply invisible absolute inset-x-0 bottom-0 z-3 mx-16 mb-32 translate-y-1/2 text-center opacity-0 transition-all;
+    @apply invisible absolute inset-x-0 bottom-0 z-3 mx-16 mb-32 translate-y-1/2  text-center opacity-0 transition-all;
     will-change: transform;
 
     .product-card:hover & {

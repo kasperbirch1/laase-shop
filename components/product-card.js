@@ -132,7 +132,7 @@ const ProductCard = React.forwardRef(
               <div className="product-card--add is-inverted">
                 <ProductAdd
                   productID={activeVariant.id}
-                  className="btn is-white is-large"
+                  className="btn border-none"
                 />
               </div>
             )}

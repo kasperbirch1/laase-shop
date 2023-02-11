@@ -24,7 +24,7 @@ const ProductActions = ({ activeVariant, klaviyoAccountID }) => {
             quantity={quantity}
             className="btn is-primary is-large is-block"
           >
-            Add To Cart
+            Tilføj til kurv
           </ProductAdd>
         </>
       ) : (
@@ -35,9 +35,7 @@ const ProductActions = ({ activeVariant, klaviyoAccountID }) => {
               klaviyo={klaviyoAccountID}
             />
           ) : (
-            <div className="btn is-large is-disabled is-block">
-              Out of Stock
-            </div>
+            <div className="btn is-large is-disabled is-block">Udsolgt</div>
           )}
         </>
       )}
