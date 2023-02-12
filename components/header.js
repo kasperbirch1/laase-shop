@@ -18,8 +18,9 @@ import {
 
 import PromoBar from '@components/promo-bar'
 import Menu from '@components/menu'
+import Search from '@components/search'
 import MegaNavigation from '@components/menu-mega-nav'
-import Icon from '@components/icon'
+// import Icon from '@components/icon'
 
 const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
   // expand our header data
@@ -163,6 +164,8 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                     </div>
                   </FocusTrap>
 
+                  <Search />
+
                   <CartToggle />
                 </div>
 
@@ -177,6 +180,8 @@ const Header = ({ data = {}, isTransparent, onSetup = () => {} }) => {
                       />
                     )}
                   </div>
+
+                  <Search />
 
                   <div className="menu-right">
                     {menuDesktopRight?.items && (

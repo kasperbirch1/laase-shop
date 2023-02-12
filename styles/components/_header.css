@@ -18,7 +18,7 @@ a[href='#content'].skip-link {
   }
 
   &--inner {
-    @apply relative z-2 bg-pageBG p-4 sm:p-16;
+    @apply relative bg-pageBG p-4 sm:p-16;
 
     .is-overlay & {
       @apply bg-transparent transition-colors duration-300;
@@ -162,7 +162,11 @@ a[href='#content'].skip-link {
 
 .main-navigation {
   &--desktop {
-    @apply absolute inset-0 hidden items-center justify-between sm:flex;
+    @apply absolute inset-0 hidden items-center sm:flex;
+
+    .menu-left {
+      @apply flex-1;
+    }
 
     .menu-left,
     .menu-right {

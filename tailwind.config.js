@@ -50,6 +50,7 @@ module.exports = {
       white: '#FFFFFF',
       pageBG: 'var(--pageBG)',
       pageText: 'var(--pageText)',
+      gray: 'gray',
     },
     fontSize: new Array(201)
       .fill()
