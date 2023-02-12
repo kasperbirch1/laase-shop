@@ -39,7 +39,11 @@ const HeadSEO = ({ site = {}, page = {}, schema }) => {
     <Head>
       <meta charSet="utf-8" />
       <meta httpEquiv="x-ua-compatible" content="ie=edge" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta
+        name="viewport"
+        content="initial-scale=1.0, width=device-width, maximum-scale=1.0, user-scalable=no"
+      />
+
       <meta name="format-detection" content="telephone=no" />
 
       <link rel="icon" href={siteFaviconLegacy} sizes="any" />
